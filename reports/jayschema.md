@@ -14,6 +14,8 @@ that is the case for these tests.
 |`maxLength validation, two supplementary Unicode code points is long enough`|Expected result: `true` but validator returned: `false`
 |`minLength validation, one supplementary Unicode code point is not long enough`|Expected result: `false` but validator returned: `true`
 |`validation of URIs, an invalid URI though valid URI reference`|Expected result: `false` but validator returned: `true`
+|`property named $ref that is not a reference, property named $ref valid`|Expected result: `true` but validator returned: `"uri.slice is not a function"`. **This excludes this validator from performance tests**
+|`property named $ref that is not a reference, property named $ref invalid`|Expected result: `false` but validator returned: `"uri.slice is not a function"`. **This excludes this validator from performance tests**
 |`remote ref, remote ref valid`|Expected result: `true` but validator returned: `false`
 |`fragment within remote ref, remote fragment valid`|Expected result: `true` but validator returned: `"Cannot convert undefined or null to object"`
 |`fragment within remote ref, remote fragment invalid`|Expected result: `false` but validator returned: `"Cannot convert undefined or null to object"`

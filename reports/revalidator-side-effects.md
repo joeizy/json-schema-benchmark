@@ -2136,6 +2136,90 @@ When running tests [`revalidator`](https://github.com/flatiron/revalidator) muta
 ```
 
 # Side-effect on schema
+[`revalidator`](https://github.com/flatiron/revalidator) had a side-effect on (altered the original) schema in the test `maximum validation, below the maximum is valid`
+## Original schema
+```js
+{
+	"maximum": 3
+}
+```
+## Schema after validating
+```js
+{
+	"maximum": 3,
+	"additionalProperties": true
+}
+```
+
+# Side-effect on schema
+[`revalidator`](https://github.com/flatiron/revalidator) had a side-effect on (altered the original) schema in the test `maximum validation, above the maximum is invalid`
+## Original schema
+```js
+{
+	"maximum": 3
+}
+```
+## Schema after validating
+```js
+{
+	"maximum": 3,
+	"additionalProperties": true
+}
+```
+
+# Side-effect on schema
+[`revalidator`](https://github.com/flatiron/revalidator) had a side-effect on (altered the original) schema in the test `maximum validation, ignores non-numbers`
+## Original schema
+```js
+{
+	"maximum": 3
+}
+```
+## Schema after validating
+```js
+{
+	"maximum": 3,
+	"additionalProperties": true
+}
+```
+
+# Side-effect on schema
+[`revalidator`](https://github.com/flatiron/revalidator) had a side-effect on (altered the original) schema in the test `exclusiveMaximum validation, below the maximum is still valid`
+## Original schema
+```js
+{
+	"maximum": 3,
+	"exclusiveMaximum": true
+}
+```
+## Schema after validating
+```js
+{
+	"maximum": 3,
+	"exclusiveMaximum": true,
+	"additionalProperties": true
+}
+```
+
+# Side-effect on schema
+[`revalidator`](https://github.com/flatiron/revalidator) had a side-effect on (altered the original) schema in the test `exclusiveMaximum validation, boundary point is invalid`
+## Original schema
+```js
+{
+	"maximum": 3,
+	"exclusiveMaximum": true
+}
+```
+## Schema after validating
+```js
+{
+	"maximum": 3,
+	"exclusiveMaximum": true,
+	"additionalProperties": true
+}
+```
+
+# Side-effect on schema
 [`revalidator`](https://github.com/flatiron/revalidator) had a side-effect on (altered the original) schema in the test `maxItems validation, shorter is valid`
 ## Original schema
 ```js
@@ -2344,85 +2428,85 @@ When running tests [`revalidator`](https://github.com/flatiron/revalidator) muta
 ```
 
 # Side-effect on schema
-[`revalidator`](https://github.com/flatiron/revalidator) had a side-effect on (altered the original) schema in the test `maximum validation, below the maximum is valid`
+[`revalidator`](https://github.com/flatiron/revalidator) had a side-effect on (altered the original) schema in the test `minimum validation, above the minimum is valid`
 ## Original schema
 ```js
 {
-	"maximum": 3
+	"minimum": 1.1
 }
 ```
 ## Schema after validating
 ```js
 {
-	"maximum": 3,
+	"minimum": 1.1,
 	"additionalProperties": true
 }
 ```
 
 # Side-effect on schema
-[`revalidator`](https://github.com/flatiron/revalidator) had a side-effect on (altered the original) schema in the test `maximum validation, above the maximum is invalid`
+[`revalidator`](https://github.com/flatiron/revalidator) had a side-effect on (altered the original) schema in the test `minimum validation, below the minimum is invalid`
 ## Original schema
 ```js
 {
-	"maximum": 3
+	"minimum": 1.1
 }
 ```
 ## Schema after validating
 ```js
 {
-	"maximum": 3,
+	"minimum": 1.1,
 	"additionalProperties": true
 }
 ```
 
 # Side-effect on schema
-[`revalidator`](https://github.com/flatiron/revalidator) had a side-effect on (altered the original) schema in the test `maximum validation, ignores non-numbers`
+[`revalidator`](https://github.com/flatiron/revalidator) had a side-effect on (altered the original) schema in the test `minimum validation, ignores non-numbers`
 ## Original schema
 ```js
 {
-	"maximum": 3
+	"minimum": 1.1
 }
 ```
 ## Schema after validating
 ```js
 {
-	"maximum": 3,
+	"minimum": 1.1,
 	"additionalProperties": true
 }
 ```
 
 # Side-effect on schema
-[`revalidator`](https://github.com/flatiron/revalidator) had a side-effect on (altered the original) schema in the test `exclusiveMaximum validation, below the maximum is still valid`
+[`revalidator`](https://github.com/flatiron/revalidator) had a side-effect on (altered the original) schema in the test `exclusiveMinimum validation, above the minimum is still valid`
 ## Original schema
 ```js
 {
-	"maximum": 3,
-	"exclusiveMaximum": true
+	"minimum": 1.1,
+	"exclusiveMinimum": true
 }
 ```
 ## Schema after validating
 ```js
 {
-	"maximum": 3,
-	"exclusiveMaximum": true,
+	"minimum": 1.1,
+	"exclusiveMinimum": true,
 	"additionalProperties": true
 }
 ```
 
 # Side-effect on schema
-[`revalidator`](https://github.com/flatiron/revalidator) had a side-effect on (altered the original) schema in the test `exclusiveMaximum validation, boundary point is invalid`
+[`revalidator`](https://github.com/flatiron/revalidator) had a side-effect on (altered the original) schema in the test `exclusiveMinimum validation, boundary point is invalid`
 ## Original schema
 ```js
 {
-	"maximum": 3,
-	"exclusiveMaximum": true
+	"minimum": 1.1,
+	"exclusiveMinimum": true
 }
 ```
 ## Schema after validating
 ```js
 {
-	"maximum": 3,
-	"exclusiveMaximum": true,
+	"minimum": 1.1,
+	"exclusiveMinimum": true,
 	"additionalProperties": true
 }
 ```
@@ -2631,90 +2715,6 @@ When running tests [`revalidator`](https://github.com/flatiron/revalidator) muta
 ```js
 {
 	"minProperties": 1,
-	"additionalProperties": true
-}
-```
-
-# Side-effect on schema
-[`revalidator`](https://github.com/flatiron/revalidator) had a side-effect on (altered the original) schema in the test `minimum validation, above the minimum is valid`
-## Original schema
-```js
-{
-	"minimum": 1.1
-}
-```
-## Schema after validating
-```js
-{
-	"minimum": 1.1,
-	"additionalProperties": true
-}
-```
-
-# Side-effect on schema
-[`revalidator`](https://github.com/flatiron/revalidator) had a side-effect on (altered the original) schema in the test `minimum validation, below the minimum is invalid`
-## Original schema
-```js
-{
-	"minimum": 1.1
-}
-```
-## Schema after validating
-```js
-{
-	"minimum": 1.1,
-	"additionalProperties": true
-}
-```
-
-# Side-effect on schema
-[`revalidator`](https://github.com/flatiron/revalidator) had a side-effect on (altered the original) schema in the test `minimum validation, ignores non-numbers`
-## Original schema
-```js
-{
-	"minimum": 1.1
-}
-```
-## Schema after validating
-```js
-{
-	"minimum": 1.1,
-	"additionalProperties": true
-}
-```
-
-# Side-effect on schema
-[`revalidator`](https://github.com/flatiron/revalidator) had a side-effect on (altered the original) schema in the test `exclusiveMinimum validation, above the minimum is still valid`
-## Original schema
-```js
-{
-	"minimum": 1.1,
-	"exclusiveMinimum": true
-}
-```
-## Schema after validating
-```js
-{
-	"minimum": 1.1,
-	"exclusiveMinimum": true,
-	"additionalProperties": true
-}
-```
-
-# Side-effect on schema
-[`revalidator`](https://github.com/flatiron/revalidator) had a side-effect on (altered the original) schema in the test `exclusiveMinimum validation, boundary point is invalid`
-## Original schema
-```js
-{
-	"minimum": 1.1,
-	"exclusiveMinimum": true
-}
-```
-## Schema after validating
-```js
-{
-	"minimum": 1.1,
-	"exclusiveMinimum": true,
 	"additionalProperties": true
 }
 ```
@@ -5022,6 +5022,54 @@ When running tests [`revalidator`](https://github.com/flatiron/revalidator) muta
 ```
 
 # Side-effect on schema
+[`revalidator`](https://github.com/flatiron/revalidator) had a side-effect on (altered the original) schema in the test `property named $ref that is not a reference, property named $ref valid`
+## Original schema
+```js
+{
+	"properties": {
+		"$ref": {
+			"type": "string"
+		}
+	}
+}
+```
+## Schema after validating
+```js
+{
+	"properties": {
+		"$ref": {
+			"type": "string"
+		}
+	},
+	"additionalProperties": true
+}
+```
+
+# Side-effect on schema
+[`revalidator`](https://github.com/flatiron/revalidator) had a side-effect on (altered the original) schema in the test `property named $ref that is not a reference, property named $ref invalid`
+## Original schema
+```js
+{
+	"properties": {
+		"$ref": {
+			"type": "string"
+		}
+	}
+}
+```
+## Schema after validating
+```js
+{
+	"properties": {
+		"$ref": {
+			"type": "string"
+		}
+	},
+	"additionalProperties": true
+}
+```
+
+# Side-effect on schema
 [`revalidator`](https://github.com/flatiron/revalidator) had a side-effect on (altered the original) schema in the test `remote ref, remote ref valid`
 ## Original schema
 ```js
@@ -5230,6 +5278,34 @@ When running tests [`revalidator`](https://github.com/flatiron/revalidator) muta
 ```
 
 # Side-effect on schema
+[`revalidator`](https://github.com/flatiron/revalidator) had a side-effect on (altered the original) schema in the test `required validation, ignores non-objects`
+## Original schema
+```js
+{
+	"properties": {
+		"foo": {},
+		"bar": {}
+	},
+	"required": [
+		"foo"
+	]
+}
+```
+## Schema after validating
+```js
+{
+	"properties": {
+		"foo": {},
+		"bar": {}
+	},
+	"required": [
+		"foo"
+	],
+	"additionalProperties": true
+}
+```
+
+# Side-effect on schema
 [`revalidator`](https://github.com/flatiron/revalidator) had a side-effect on (altered the original) schema in the test `required default validation, not required by default`
 ## Original schema
 ```js
@@ -5283,6 +5359,22 @@ When running tests [`revalidator`](https://github.com/flatiron/revalidator) muta
 
 # Side-effect on schema
 [`revalidator`](https://github.com/flatiron/revalidator) had a side-effect on (altered the original) schema in the test `integer type matches integers, a string is not an integer`
+## Original schema
+```js
+{
+	"type": "integer"
+}
+```
+## Schema after validating
+```js
+{
+	"type": "integer",
+	"additionalProperties": true
+}
+```
+
+# Side-effect on schema
+[`revalidator`](https://github.com/flatiron/revalidator) had a side-effect on (altered the original) schema in the test `integer type matches integers, a string is still not an integer, even if it looks like one`
 ## Original schema
 ```js
 {
@@ -5410,6 +5502,22 @@ When running tests [`revalidator`](https://github.com/flatiron/revalidator) muta
 ```
 
 # Side-effect on schema
+[`revalidator`](https://github.com/flatiron/revalidator) had a side-effect on (altered the original) schema in the test `number type matches numbers, a string is still not a number, even if it looks like one`
+## Original schema
+```js
+{
+	"type": "number"
+}
+```
+## Schema after validating
+```js
+{
+	"type": "number",
+	"additionalProperties": true
+}
+```
+
+# Side-effect on schema
 [`revalidator`](https://github.com/flatiron/revalidator) had a side-effect on (altered the original) schema in the test `number type matches numbers, an object is not a number`
 ## Original schema
 ```js
@@ -5507,6 +5615,22 @@ When running tests [`revalidator`](https://github.com/flatiron/revalidator) muta
 
 # Side-effect on schema
 [`revalidator`](https://github.com/flatiron/revalidator) had a side-effect on (altered the original) schema in the test `string type matches strings, a string is a string`
+## Original schema
+```js
+{
+	"type": "string"
+}
+```
+## Schema after validating
+```js
+{
+	"type": "string",
+	"additionalProperties": true
+}
+```
+
+# Side-effect on schema
+[`revalidator`](https://github.com/flatiron/revalidator) had a side-effect on (altered the original) schema in the test `string type matches strings, a string is still a string, even if it looks like a number`
 ## Original schema
 ```js
 {

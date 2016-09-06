@@ -44,17 +44,17 @@ that is the case for these tests.
 |`enums in properties, missing all properties is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 |`a schema given for items, wrong type of items`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 |`an array of schemas for items, wrong types`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+|`maximum validation, above the maximum is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+|`exclusiveMaximum validation, boundary point is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 |`maxItems validation, too long is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 |`maxLength validation, too long is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 |`maxProperties validation, too long is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
-|`maximum validation, above the maximum is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
-|`exclusiveMaximum validation, boundary point is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+|`minimum validation, below the minimum is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+|`exclusiveMinimum validation, boundary point is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 |`minItems validation, too short is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 |`minLength validation, too short is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 |`minLength validation, one supplementary Unicode code point is not long enough`|Expected result: `false` but validator returned: `true`
 |`minProperties validation, too short is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
-|`minimum validation, below the minimum is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
-|`exclusiveMinimum validation, boundary point is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 |`by int, int by int fail`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 |`by number, 35 is not multiple of 1.5`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 |`by small number, 0.00751 is not multiple of 0.0001`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
@@ -103,11 +103,13 @@ that is the case for these tests.
 |`required validation, non-present required property is invalid`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 |`integer type matches integers, a float is not an integer`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 |`integer type matches integers, a string is not an integer`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+|`integer type matches integers, a string is still not an integer, even if it looks like one`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 |`integer type matches integers, an object is not an integer`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 |`integer type matches integers, an array is not an integer`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 |`integer type matches integers, a boolean is not an integer`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 |`integer type matches integers, null is not an integer`|Expected result: `false` but validator returned: `"Cannot convert undefined or null to object"`. **This excludes this validator from performance tests**
 |`number type matches numbers, a string is not a number`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
+|`number type matches numbers, a string is still not a number, even if it looks like one`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 |`number type matches numbers, an object is not a number`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 |`number type matches numbers, an array is not a number`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**
 |`number type matches numbers, a boolean is not a number`|Expected result: `false` but validator returned: `true`. **This excludes this validator from performance tests**

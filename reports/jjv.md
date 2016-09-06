@@ -17,6 +17,7 @@ that is the case for these tests.
 |`escaped pointer ref, tilda valid`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 |`escaped pointer ref, percent valid`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 |`change resolution scope, changed scope ref valid`|Expected result: `true` but validator returned: `false`
+|`required validation, ignores non-objects`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 
 **All other tests passed**.
 

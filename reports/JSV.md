@@ -63,6 +63,7 @@ that is the case for these tests.
 |`ref within remote ref, ref within ref valid`|Expected result: `true` but validator returned: `false`
 |`change resolution scope, changed scope ref valid`|Expected result: `true` but validator returned: `false`
 |`required validation, present required property is valid`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
+|`required validation, ignores non-objects`|Expected result: `true` but validator returned: `false`. **This excludes this validator from performance tests**
 |`uniqueItems validation, non-unique array of objects is invalid`|Expected result: `false` but validator returned: `true`
 |`uniqueItems validation, non-unique array of nested objects is invalid`|Expected result: `false` but validator returned: `true`
 |`uniqueItems validation, non-unique array of arrays is invalid`|Expected result: `false` but validator returned: `true`

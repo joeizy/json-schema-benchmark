@@ -81,6 +81,7 @@ that is the case for these tests.
 |`change resolution scope, changed scope ref invalid`|Expected result: `false` but validator returned: `true`
 |`required validation, present required property is valid`|The schema failed to load(`Schema: 'required' attribute is an array when it should be a boolean`). **This excludes this validator from performance tests**
 |`required validation, non-present required property is invalid`|The schema failed to load(`Schema: 'required' attribute is an array when it should be a boolean`). **This excludes this validator from performance tests**
+|`required validation, ignores non-objects`|The schema failed to load(`Schema: 'required' attribute is an array when it should be a boolean`). **This excludes this validator from performance tests**
 
 **All other tests passed**.
 
